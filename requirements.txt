@@ -1,0 +1,26 @@
+# Orchestration / LLM tooling
+langgraph
+langgraph-checkpoint-sqlite
+langchain
+langchain-core
+langchain-community
+# LLM providers (install only what you use; all listed for convenience)
+langchain-groq
+langchain-google-genai
+langchain-nvidia-ai-endpoints
+# Vector store + embeddings
+chromadb
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+datasets
+# Validation, config
+pydantic
+python-dotenv
+# Observability
+langfuse
+# UI
+streamlit
+pandas
+# Tests
+pytest

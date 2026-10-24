@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+data/vectorstore/*
+!data/vectorstore/.gitkeep
+data/*.db
+tests/bitext_holdout.json
+.pytest_cache/

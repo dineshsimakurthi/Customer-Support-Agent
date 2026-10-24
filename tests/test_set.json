@@ -1,0 +1,122 @@
+[
+  {
+    "ticket": "I want to return the laptop from order ORD-1001 and get my money back.",
+    "category": "REFUND",
+    "sentiment": "neutral",
+    "expect_human": true
+  },
+  {
+    "ticket": "Where is my package? Order ORD-1002 says shipped but nothing has arrived.",
+    "category": "DELIVERY",
+    "sentiment": "negative",
+    "expect_human": false
+  },
+  {
+    "ticket": "How long does a refund take to show up on my card?",
+    "category": "REFUND",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "Please cancel order ORD-1004, I ordered the wrong cable.",
+    "category": "ORDER",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "What is the fee if I cancel my order after it ships?",
+    "category": "CANCEL",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "I forgot my password and cannot log in.",
+    "category": "ACCOUNT",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "How do I change the email address on my account?",
+    "category": "ACCOUNT",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "I was charged twice for my last purchase.",
+    "category": "PAYMENT",
+    "sentiment": "negative",
+    "expect_human": false
+  },
+  {
+    "ticket": "What payment methods do you accept?",
+    "category": "PAYMENT",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "Can I get an invoice for order ORD-1003 for my company?",
+    "category": "INVOICE",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "I need to change the shipping address for order ORD-1002.",
+    "category": "SHIPPING",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "How long will delivery take to Canada?",
+    "category": "DELIVERY",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "I want to change the colour of my order ORD-1004 before it ships.",
+    "category": "ORDER",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "I want to talk to a real person please.",
+    "category": "CONTACT",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "Your support has been awful. I want to file a complaint!",
+    "category": "FEEDBACK",
+    "sentiment": "angry",
+    "expect_human": true
+  },
+  {
+    "ticket": "How do I unsubscribe from your newsletter?",
+    "category": "SUBSCRIPTION",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "I would like to place an order for three smartwatches.",
+    "category": "ORDER",
+    "sentiment": "positive",
+    "expect_human": false
+  },
+  {
+    "ticket": "Where can I see the status of my refund?",
+    "category": "REFUND",
+    "sentiment": "neutral",
+    "expect_human": false
+  },
+  {
+    "ticket": "Great service, I want to leave a positive review for your store!",
+    "category": "FEEDBACK",
+    "sentiment": "positive",
+    "expect_human": false
+  },
+  {
+    "ticket": "I NEED MY REFUND FOR ORD-1003 NOW. THIS IS A SCAM, I AM CALLING MY LAWYER.",
+    "category": "REFUND",
+    "sentiment": "angry",
+    "expect_human": true
+  }
+]
