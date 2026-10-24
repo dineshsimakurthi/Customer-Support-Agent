@@ -2,24 +2,7 @@
 
 A LangGraph workflow that turns a customer ticket into a grounded support response while keeping risky cases in human review.
 
-## Orchestration flow
 
-```mermaid
-flowchart TD
-    A[Ticket] --> B[classify]
-    B --> C{Order info?}
-    C -->|Yes| D[lookup_order]
-    C -->|No| E[retrieve]
-    D --> E
-    E --> F[draft]
-    F --> G[confidence check]
-    G --> H{Safe and confident?}
-    H -->|Yes| I[auto_send]
-    H -->|No| J[human_review]
-    I --> K[log]
-    J --> K
-    K --> L[End]
-```
 
 ## What this project does
 
