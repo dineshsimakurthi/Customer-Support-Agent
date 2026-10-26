@@ -4,6 +4,14 @@ from contextlib import closing
 
 from app import config
 
+SAMPLE_ORDERS = [
+    ("ORD-1001", "Alice Johnson", "Pro Laptop 15", 1299.00, "delivered", "2026-01-05"),
+    ("ORD-1002", "Ben Carter", "Wireless Headphones", 89.00, "shipped", "2026-01-12"),
+    ("ORD-1003", "Chitra Rao", "Smartphone X", 649.00, "delivered", "2026-01-19"),
+    ("ORD-1004", "Dan Lee", "USB-C Cable 2m", 19.00, "processing", "2026-01-25"),
+    ("ORD-1005", "Eva Moreno", "Smartwatch S2", 199.00, "delivered", "2026-02-01"),
+]
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS orders (
     order_id   TEXT PRIMARY KEY,
@@ -41,10 +49,18 @@ def get_conn() -> sqlite3.Connection:
 def init_db() -> None:
     with closing(get_conn()) as conn:
         conn.executescript(SCHEMA)
+        if conn.execute("SELECT COUNT(*) FROM orders").fetchone()[0] == 0:
+            conn.executemany(
+                "INSERT OR IGNORE INTO orders (order_id, customer, product, amount, status, order_date) VALUES (?, ?, ?, ?, ?, ?)",
+                SAMPLE_ORDERS,
+            )
         conn.commit()
 
 
 def get_order(order_id: str) -> dict | None:
+    normalized = (order_id or "").strip().upper()
+    if not normalized:
+        return None
     with closing(get_conn()) as conn:
-        row = conn.execute("SELECT * FROM orders WHERE order_id = ?", (order_id,)).fetchone()
+        row = conn.execute("SELECT * FROM orders WHERE order_id = ?", (normalized,)).fetchone()
     return dict(row) if row else None
